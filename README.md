@@ -1,95 +1,95 @@
 # ❌ No-as-a-Service
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/hotheadhacker/no-as-a-service/main/assets/imgs/naas-with-no-logo-bunny.png" width="800" alt="No-as-a-Service Banner" width="70%"/>
-</p>
+<img src="https://raw.githubusercontent.com/hotheadhacker/no-as-a-service/main/assets/imgs/naas-with-no-logo-bunny.png" width="800" alt="No-as-a-Service Banner" width="70%"/>
 
 
-Ever needed a graceful way to say “no”?  
-This tiny API returns random, generic, creative, and sometimes hilarious rejection reasons — perfectly suited for any scenario: personal, professional, student life, dev life, or just because.
 
-Built for humans, excuses, and humor.
+Já precisou de uma forma elegante de dizer “não”?
+Esta pequena API retorna razões de rejeição aleatórias, genéricas, criativas e às vezes hilárias — perfeitamente adequadas para qualquer cenário: pessoal, profissional, vida estudantil, vida de desenvolvedor, ou simplesmente porque sim.
+
+Feito para humanos, desculpas e humor.
 
 <!-- GitAds Sponsorship Badge -->
 <p align="center">
-  <a href="https://docs.gitads.dev/">
-    <img src="https://gitads.dev/assets/images/sponsor/camos/camo-3.png" alt="Sponsored by GitAds" />
-  </a>
-</p>
+<a href="https://docs.gitads.dev/">
+<img src="https://gitads.dev/assets/images/sponsor/camos/camo-3.png" alt="Sponsored by GitAds" />
+</a>
+
 
 <p align="center">
-  This project is <strong>sponsored by <a href="https://docs.gitads.dev/docs/getting-started/publishers">GitAds</a></strong>.<br>
-  You can get your GitHub repository sponsored too — <a href="https://docs.gitads.dev/docs/getting-started/publishers">create your account now</a>.
-</p>
+Este projeto é <strong>patrocinado por <a href="https://docs.gitads.dev/docs/getting-started/publishers">GitAds</a></strong>.<br>
+Você também pode patrocinar seu repositório GitHub — <a href="https://docs.gitads.dev/docs/getting-started/publishers">crie sua conta agora</a>.
+
 
 ---
 
-## 🚀 API Usage
+## 🚀 Uso da API
 
-**Base URL**
+**URL Base**
 ```
 https://naas.isalman.dev/no
 ```
 
-**Method:** `GET`  
-**Rate Limit:** `120 requests per minute per IP`
+**Método:** `GET`
+**Limite de Requisições:** `120 requisições por minuto por IP`
 
-### 🔄 Example Request
+### 🔄 Exemplo de Requisição
 ```http
 GET /no
 ```
 
-### ✅ Example Response
+### ✅ Exemplo de Resposta
 ```json
 {
-  "reason": "This feels like something Future Me would yell at Present Me for agreeing to."
+"reason": "Isso parece algo que o Eu do Futuro gritaria para o Eu do Presente por ter concordado."
 }
 ```
 
-Use it in apps, bots, landing pages, Slack integrations, rejection letters, or wherever you need a polite (or witty) no.
+Use em aplicativos, bots, páginas de destino, integrações com Slack, cartas de rejeição, ou onde quer que precise de um não educado (ou espirituoso).
 
 ---
 
-## 🛠️ Self-Hosting
+## 🛠️ Executando Localmente
 
-Want to run it yourself? It’s lightweight and simple.
+Quer rodar na sua máquina? É simples e leve
 
-### 1. Clone this repository
+### 1. Clone este repositório 
 ```bash
-git clone https://github.com/hotheadhacker/no-as-a-service.git
-cd no-as-a-service
+git clone https://github.com/VitaoDeveloper/no-as-a-service-portuguese-ts.git
+cd no-as-a-service-portuguese-ts
 ```
 
-### 2. Install dependencies
+### 2. Instale as dependências (Necessário ter o Node.js instalado)
 ```bash
 npm install
 ```
 
-### 3. Start the server
+### 3. Inicialize o servidor
 ```bash
 npm start
 ```
 
-The API will be live at:
+A API ficará hospedada temporariamente em:
 ```
 http://localhost:3000/no
 ```
 
-You can also change the port using an environment variable:
+Você também pode alterar a porta por meio da variável de ambiente:
 ```bash
 PORT=5000 npm start
 ```
 
 ---
 
-## 📁 Project Structure
+## 📁 Estrutura do Projeto
 
 ```
 no-as-service/
-├── index.js            # Express API
-├── reasons.json        # 1000+ universal rejection reasons
+├── index.js            # API com Express.js
+├── reasons.json        # 1000+ desculpas universais aleatórias
 ├── package.json
-├── .devcontainer.json  # VS Code / Github devcontainer setup
+├── .devcontainer.json  # Arquivo de configuração do devcontainer VS Code / Github
 └── README.md
 ```
 
@@ -97,7 +97,7 @@ no-as-service/
 
 ## 📦 package.json
 
-For reference, here’s the package config:
+Pela formalidade, essa é a configuração do package:
 
 ```json
 {
@@ -183,6 +183,7 @@ Here are some projects and websites that creatively integrate [no-as-a-service](
 ## 👤 Author
 
 Created with creative stubbornness by [hotheadhacker](https://github.com/hotheadhacker)
+Typescript and portuguese fork br [VitaoDeveloper](https://github.com/VitaoDeveloper)
 
 ---
 
