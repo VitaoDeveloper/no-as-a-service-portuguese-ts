@@ -182,8 +182,8 @@ Here are some projects and websites that creatively integrate [no-as-a-service](
 
 ## 👤 Author
 
-Created with creative stubbornness by [hotheadhacker](https://github.com/hotheadhacker)
-Typescript and portuguese fork br [VitaoDeveloper](https://github.com/VitaoDeveloper)
+Created with creative stubbornness by [hotheadhacker](https://github.com/hotheadhacker) <br>
+Typescript and portuguese fork by [VitaoDeveloper](https://github.com/VitaoDeveloper)
 
 ---
 
