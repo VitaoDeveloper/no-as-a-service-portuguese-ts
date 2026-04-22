@@ -34,6 +34,10 @@ const limiter = rateLimit({
 
 app.use(limiter);
 
+app.get('/', (_req: Request, res: Response) => {
+  res.send('Essa é a raiz da API. <br> Adicione "/no" na URL para acessar o endpoint principal')
+})
+
 // Random rejection reason endpoint
 app.get('/no', ({}: Request, res: Response) => {
   const reason: { reason: string } = {
