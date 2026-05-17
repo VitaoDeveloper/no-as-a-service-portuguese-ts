@@ -190,3 +190,11 @@ Typescript and portuguese fork by [VitaoDeveloper](https://github.com/VitaoDevel
 ## 📄 License
 
 MIT — do whatever, just don’t say yes when you should say no.
+
+---
+
+## 🐧 Testimonials
+
+> "I tried to integrate No-as-a-Service into the Linux kernel to reject bad patches automatically, but it started rejecting my own commits. 10/10, absolutely ruthless."
+> 
+> — **Linus Torvalds** (probably)
