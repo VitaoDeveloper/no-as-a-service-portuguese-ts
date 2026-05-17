@@ -1,25 +1,30 @@
 import express, { Express, Request, Response} from 'express'
-import rateLimit from 'express-rate-limit';
-import { fileURLToPath } from 'node:url';
+import rateLimit, { RateLimitInfo, RateLimitRequestHandler } from 'express-rate-limit';
 import { readFileSync } from 'node:fs'
-import path from 'node:path'
 import cors from 'cors'
 import 'dotenv/config';
 
+// Types and Interfaces
+interface ReasonResponse<T> {
+  reason: T
+};
 
+type Reasons<T> = T[];
+
+// API 
 const app: Express = express();
 
 app.use(cors());
 app.use(express.json());
 app.set('trust proxy', true);
 
-const PORT = process.env.PORT || 3000;
+const PORT: number = Number(process.env.PORT) || 3000;
 
 // Load reasons from JSON
-const reasons = JSON.parse(readFileSync(`reasons.json`, 'utf-8'));
+const reasons: Reasons<string> = JSON.parse(readFileSync(`reasons.json`, 'utf-8'));
 
 // Rate limiter: 120 requests per minute per IP
-const limiter = rateLimit({
+const limiter: RateLimitRequestHandler = rateLimit({
   windowMs: 60 * 1000, // 1 minute
   max: 120,
   keyGenerator: (req: Request): string => {
@@ -34,14 +39,14 @@ const limiter = rateLimit({
 
 app.use(limiter);
 
-app.get('/', (_req: Request, res: Response) => {
+app.get('/', ({}: Request, res: Response<string>) => {
   res.send('This is the API root. <br> Add /no in the URL to access the endpoint')
 })
 
 // Random rejection reason endpoint
-app.get('/no', ({}: Request, res: Response) => {
-  const reason: { reason: string } = {
-    reason: reasons[Math.floor(Math.random() * reasons.length)]
+app.get('/no', ({}: Request, res: Response<ReasonResponse<string>>) => {
+  const reason: ReasonResponse<string> = {
+    reason: reasons[Math.floor(Math.random() * reasons.length)]!
   };
 
   res.json(reason);
