@@ -123,7 +123,7 @@ For reference, here’s the package config:
     "build": "tsc && copyfiles reasons.json dist/",
     "start": "node dist/index.js"
   },
-  "author": "vitao",
+  "author": "hotheadhacker",
   "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
